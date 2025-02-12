@@ -1,19 +1,21 @@
+# Woof Pad 🐕
 
-# Solana Pump Fun
-Notice: This project was inspired by https://github.com/Allen-Taylor/pump_fun_py and modified for use in typescript with some extra additions.
-Also modified the code to send the associated token account creation in a single transaction with the buy or sell for increased speed.
+**Woof Pad** is the ultimate meme coin launchpad and trading platform built on **Shibarium**. Create & trade your favorite meme coins with ease! This open-source platform is designed for developers and enthusiasts who want to explore the world of meme coins with low fees and high-speed transactions.
 
-Solana Pump Fun is an open-source package designed to facilitate the execution and simulation of buy and sell transactions for pump.fun on the Solana blockchain. This tool is useful for developers and enthusiasts looking to understand transaction mechanics and resource consumption on Solana.
 
-If you're looking for a launch bundler check out my other repository at: https://github.com/bilix-software/pump-fun-token-launcher
+For inquiries or custom solutions, contact us at **drew@woofpad.fun**.
 
-Services are for hire, contact me at https://t.me/bilixsoftware or info@bilix.io
+---
+
 ## Features
 
-- Simulates buy and sell transactions for pump.fun on the Solana blockchain.
-- Executes buy and sell transactions for pump.fun on the Solana blockchain.
-- Provides detailed logs of transaction steps and resource consumption.
-- Easy to use and integrate into existing projects.
+- 🚀 **Token Creation**: Launch your own meme coin in minutes.
+- 💧 **Liquidity Pools**: Seamless trading with automated liquidity.
+- 🏆 **Gamification**: Leaderboards, trending coins, and more.
+- 💸 **Low Fees**: Powered by Shibarium’s ultra-low transaction costs.
+- 📊 **Detailed Logs**: Track transaction steps and resource consumption.
+
+---
 
 ## Prerequisites
 
@@ -22,81 +24,89 @@ Ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (version 14 or later)
 - [npm](https://www.npmjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [MetaMask](https://metamask.io/) (or another EVM-compatible wallet)
+
+---
 
 ## Installation
 
 To install the package, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/bilix-software/solana-pump-fun.git
-cd solana-pump-fun
+git clone https://github.com/wokchoy/woof-pad.git
+cd woof-pad
 npm install
-```
+Configuration
+Before running the platform, you need to set up your private key and specify the token mint. Open the example.ts file and replace the placeholder values with your actual private key and token mint address.
 
-## Configuration
+Example Configuration
+In example.ts, set your private key, token mint address, and transaction mode:
 
-Before running the simulation, you need to set up your private key and specify the token mint. Open the `example.ts` file and replace the placeholder values with your actual private key and token mint address.
-
-### Example Configuration
-
-In `example.ts`, set your private key, token mint address, and transaction mode:
-
-```typescript
-const privateKey = 'your_private_key'; // Replace with your actual private key
-const mintAddress = 'your_token_mint_address'; // Replace with actual token mint address
+typescript
+Copy
+const privateKey = 'your_private_key_here'; // Replace with your actual private key
+const mintAddress = 'your_token_mint_address_here'; // Replace with the actual token mint address
 const txMode = TransactionMode.Simulation; // Set to Simulation to test, Execution to perform
-```
+Important: Never share your private key or commit it to version control. Use environment variables for security.
 
-## Usage
+Usage
+To run the example simulation scripts, use Node.js to execute the example.js file or compile and run the example.ts file. This will simulate buy and sell transactions and output detailed logs.
 
-To run the example simulation scripts, use Node.js to execute the `example.js` file or compile and run the `example.ts` file. This will simulate buy and sell transactions and output detailed logs.
+Running the Simulation
+Ensure your example.ts file is correctly configured.
 
-### Running the Simulation
+Compile the TypeScript files:
 
-1. Ensure your `example.ts` file is correctly configured.
-2. Compile the TypeScript files:
-
-```bash
+bash
+Copy
 npx tsc
-```
+Run the compiled JavaScript file:
 
-3. Run the compiled JavaScript file:
-
-```bash
+bash
+Copy
 node example.js
-```
+Simulate Transactions
+If you prefer to run the transactions in simulation mode (without actual transactions on the blockchain), ensure the txMode is set to TransactionMode.Simulation. This mode will help you understand the transaction process without incurring any cost.
 
-### Simulate Transactions
-
-If you prefer to run the transactions in simulation mode (without actual transactions on the blockchain), ensure the `txMode` is set to `TransactionMode.Simulation`. This mode will help you understand the transaction process without incurring any cost.
-
-### Example Output
-
+Example Output
 Below is an example of the output generated when running the simulation:
 
-![Example Output](image.png)
+Example Output
 
-## Project Structure
+Project Structure
+src/: Contains the source code for the package.
 
-- `src/`: Contains the source code for the package.
-- `example.js`: Example script to demonstrate how to use the package.
-- `example.ts`: TypeScript version of the example script.
-- `package.json`: Project metadata and dependencies.
-- `tsconfig.json`: TypeScript configuration file.
+example.js: Example script to demonstrate how to use the package.
 
-## Contributing
+example.ts: TypeScript version of the example script.
 
+contracts/: Solidity smart contracts for Shibarium.
+
+app/: React-based frontend for the platform.
+
+server/: Node.js backend for handling transactions.
+
+package.json: Project metadata and dependencies.
+
+tsconfig.json: TypeScript configuration file.
+
+Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a pull request
+Fork the repository.
 
-## License
+Create your feature branch (git checkout -b feature/YourFeature).
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Commit your changes (git commit -m 'Add some feature').
 
-## Tips
-JATt1ta9GcbVMThdL18rXUqHn3toCMjWkHWtxM5WN3ec
+Push to the branch (git push origin feature/YourFeature).
+
+Open a pull request.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Tips
+Use Shibarium’s testnet for experimentation before deploying on mainnet.
+
+Join the Shiba Inu community for support and collaboration.
